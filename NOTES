@@ -1,0 +1,4 @@
+Don't need to hide API key, they need to login to the account
+to use it.
+
+Try setting the Firestore to false and see if it still works.

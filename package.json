@@ -1,0 +1,15 @@
+{
+  "private": "true",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "dotenv-webpack": "^8.1.0",
+    "firebase": "^10.13.1",
+    "firebase-admin": "^12.4.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
