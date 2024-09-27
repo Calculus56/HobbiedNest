@@ -11,23 +11,55 @@ link with id tag: a#id__name
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NEXT Website</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Homepage</title>
+        <style>
+            body{
+                padding: 30px;
+                background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+            }
+            h1{
+                text-align: center;
+            }
+            button{
+                color:blueviolet;
+                background-color: #c9d6ff;
+                padding: 5px;
+                border-radius: 5px;
+                font-size: 1rem;
+                font-weight: bold;
+                border: none;
+            }
+            button:hover{
+                text-decoration: underline;
+                color: blue;
+            }
+            button, div{
+                margin-left: 15%;
+                font-size: 20px;
+                padding: 10px;
+            }
+            div{
+                font-weight:400;
+                color:rgb(12, 11, 11);
+            }
+            span{
+                font-weight:600;
+                font-size: 22px;
+                color: black;
+            }
+        </style>
+        <script type="module" src="loadenv.js"></script>
+        <script type="module" src="homepage.js"></script>
+        <!-- <link rel="stylesheet" href="styles.css"> -->
     </head>
     <body>
-        <nav class="navbar">
-            <div class="navbar__container">
-                <a href="/" id="navbar__logo">NEXT</a>
-                
-            </div>
-        </nav>
-        <h1>Test</h1>
-        <p class="styles.css">
-            Hi
-        </p>
+        <h1>Welcome to the Homepage</h1>
+        <div>FirstName: <span id="loggedUserFName"></span></div>
+        <div>LastName: <span id="loggedUserLName"></span></div>
+        <div>Email: <span id="loggedUserEmail"></span></div>
+        <button id="logout">Logout</button>
         <!-- <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
         <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script> -->
-        <script type="module" src="loadenv.js"></script>
         <!-- <script type="module" src="test.js"></script> -->
     </body>
 </html>
