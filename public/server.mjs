@@ -150,6 +150,8 @@ signIn.addEventListener('click', (event)=>{
   })
 })
 
+// TODO: Post creation with image uploading. 
+
 // module.exports = {initializeFirebaseApp}
 // module.exports = {
 //   initializeFirebaseApp,
