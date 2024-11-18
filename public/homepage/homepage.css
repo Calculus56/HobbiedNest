@@ -1,0 +1,147 @@
+/* General Styling */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f3f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            font-family: 'Courier New', Courier, monospace;
+            color: #5a92d6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #5a92d6;
+        }
+
+        /* Header */
+        .header {
+            background-color: #92bff3;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* Profile Container */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Profile Info Section */
+        .profile-info {
+            background-color: #dbeffd; /* Cream accent */
+            padding: 20px;
+            border-radius: 10px;
+            margin-right: 20px;
+            width: 300px;
+            text-align: center;
+            position: relative; /* For positioning social media links */
+        }
+
+        .profile-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Circular image */
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        /* Social Media Links */
+        .social-links {
+            position: relative; /* Change to relative */
+            margin-top: 20px; /* Add margin to push it lower */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .social-links a {
+            margin: 0 5px;
+
+            color: #5a92d6; /* Medium pastel blue */
+        }
+
+        /* Skill Tags */
+        .skill-tags {
+            margin-top: 10px;
+        }
+
+        .skill {
+            display: inline-block;
+            background-color: #a3cef7; /* Pastel Purple */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin: 5px;
+        }
+
+        /* Habits Section */
+        .habits {
+            flex-grow: 1;
+            /* background-color: #cbc3e3; Pastel Purple */
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        .habit {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #5a92d6;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 10px 0;
+            border: 2px solid #5a92d6;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            background-color: #5a92d6;
+        }
+
+        /* Recent Activity Section */
+        .recent-activity {
+            background-color: #fcf4e6; /* Cream accent */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .activity {
+            padding: 10px;
+            border-bottom: 1px solid #5a92d6;
+        }
+
+        /* Buttons */
+        button {
+            background-color: #5a92d6;
+            border: none;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            margin: 5px;
+            font-family: 'Courier New', Courier, monospace; /* Set font to Courier */
+        }
+
+        button:hover {
+            background-color: #4a82c6;
+        }

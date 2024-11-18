@@ -1,0 +1,127 @@
+/* General Styling */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f3f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            font-family: 'Courier New', Courier, monospace;
+            color: #5a92d6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #5a92d6;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Header */
+        .header {
+            background-color: #5a92d6;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            background-color: #fcf4e6; /* Cream accent */
+            padding: 20px;
+            border-right: 2px solid #5a92d6;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: width 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        .sidebar.collapsed {
+            width: 0;
+            padding: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            font-size: 18px;
+            color: #333;
+            display: block;
+            padding: 10px;
+            background-color: #c9dff4;
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #b0d4ee;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+            background-color: #fcf4e6; /* Cream accent */
+            transition: margin-left 0.3s ease;
+        }
+
+        .main-content.expanded {
+            margin-left: 0;
+        }
+
+        /* Sidebar Toggle */
+        .sidebar-toggle {
+            background-color: #5a92d6;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            position: fixed;
+            top: 10px;
+            left: 250px;
+            transition: left 0.3s ease;
+        }
+
+        .sidebar-toggle.collapsed {
+            left: 10px;
+        }
+
+        /* Bookmarks Section */
+        .bookmarks {
+            background-color: #c1e1c1; /* Pastel Green */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bookmark {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Actions Button Styling */
+        .actions button {
+            background-color: #5a92d6;
+            border: none;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            margin: 5px;
+            font-family: 'Courier New', Courier, monospace; /* Set font to Courier */
+        }

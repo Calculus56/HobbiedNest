@@ -1,0 +1,219 @@
+/* Global and body styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the form */
+.container {
+    position: relative;
+    width: 50%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Rotating border around the container */
+.container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #020000, #333399, #ffffff, #01798e);
+    z-index: -1;
+    animation: rotate 4s linear infinite;
+    border-radius: 20px;
+}
+
+/* Inner white background to cover the content */
+.container::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background-color: white;
+    z-index: 0;
+    border-radius: 16px; /* Slightly smaller to fit inside the border */
+}
+
+/* Keyframes for rotating the gradient */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Form styles */
+h2 {
+    font-size: 2rem;
+    color: black;
+    text-align: left;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 48%;
+}
+
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"],
+.registration-form input[type="email"],
+.registration-form input[type="number"] {
+    width: 100%;
+    min-width: 200px;
+    padding: 12px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background: #f0f0f0;
+    margin-top: 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.registration-form input[type="text"]:focus,
+.registration-form input[type="password"]:focus,
+.registration-form input[type="email"]:focus,
+.registration-form input[type="number"]:focus {
+    outline: none;
+    border: 1px solid #2575fc;
+}
+
+.register-btn {
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+.gender-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gender-container label {
+    font-size: 1rem;
+    color: gray;
+}
+
+.gender-container input[type="radio"] {
+    margin-right: 5px;
+}
+
+.registration-form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 2;
+}
+
+.form-group.full-width {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.star {
+    font-family: Arial, sans-serif; /* You can experiment with other fonts if needed */
+    position: absolute;
+    background: linear-gradient(to bottom, #ffffff, rgb(78, 102, 126));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Standard property */
+    color: white; /* Fallback color */
+    font-size: 30px;
+    animation: twinkle-shrink 7s forwards;
+    z-index: 9999;
+    }
+  
+
+    @keyframes twinkle-shrink {
+        0% { opacity: 0; transform: scale(1); }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { opacity: 0; transform: scale(0); }    
+  }  
+
+/* Media Queries */
+@media(max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form-columns {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        align-items: center;
+    }
+
+    .registration-form input[type="text"],
+    .registration-form input[type="password"],
+    .registration-form input[type="email"],
+    .registration-form input[type="number"] {
+        width: 100%;
+        min-width: none;
+    }
+
+    .register-btn {
+        width: 100%;
+    }
+      
+}
+
+.messageDiv{
+    background-color: hsl(327,90%,28%);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+}

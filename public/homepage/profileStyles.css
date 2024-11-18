@@ -1,0 +1,87 @@
+body{
+    background-color: #1a1a2e;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.profile-header{
+    text-align: center;
+    padding:20px;
+}
+.profile-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+
+.username {
+    font-size: 32px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.stats div {
+    margin: 0 15px;
+    text-align: center;
+}
+
+.stats div span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hobby-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.hobby-card {
+    background: linear-gradient(to right, #f39c12, #f1c40f);
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.hobby-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 10px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #e74c3c;
+    width: 70%; /* Progress percentage */
+}
+
+.progress-text {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.hours-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+canvas {
+    margin: 0 auto;
+}

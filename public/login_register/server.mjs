@@ -2,7 +2,7 @@
 // online
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
 import {getFirestore, doc, setDoc} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js"
-import {firebaseConfig} from "./loadenv.js"
+import {firebaseConfig} from "../loadenv.js"
 import {getStorage, ref, getDownloadURL, uploadBytesResumable} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-storage.js"
 
 // local

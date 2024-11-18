@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks - Habit Tracker</title>
+    <link rel="stylesheet" href="bookmarks.css"/>
+</head>
+<body>
+    <!-- Website Header -->
+    <div class="header">
+        Your Bookmarks
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h1>Habit Tracker</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="communities.html">Communities</a></li>
+            <li><a href="bookmarks.html">Bookmarks</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle">></button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <div class="bookmarks">
+            <h2>Your Bookmarks</h2>
+            <div class="bookmark">
+                <h3>Bookmark 1</h3>
+                <p>Description for bookmark 1.</p>
+                <div class="actions">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+            <div class="bookmark">
+                <h3>Bookmark 2</h3>
+                <p>Description for bookmark 2.</p>
+                <div class="actions">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+            <div class="bookmark">
+                <h3>Bookmark 3</h3>
+                <p>Description for bookmark 3.</p>
+                <div class="actions">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+            <!-- Add more bookmarks as needed -->
+        </div>
+    </div>
+
+    <script>
+        // Toggle sidebar functionality
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+            mainContent.classList.toggle('expanded');
+            sidebarToggle.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+</html>
+

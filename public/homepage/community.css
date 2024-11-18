@@ -1,0 +1,191 @@
+/* General Styling */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f3f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #5a92d6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #5a92d6;
+        }
+
+        /* Header */
+        .header {
+            background-color: #5a92d6;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            background-color: #fcf4e6; /* Cream accent */
+            padding: 20px;
+            border-right: 2px solid #5a92d6;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: width 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        .sidebar.collapsed {
+            width: 0;
+            padding: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            font-size: 18px;
+            color: #333;
+            display: block;
+            padding: 10px;
+            background-color: #c9dff4;
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #b0d4ee;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+            background-color: #fcf4e6; /* Cream accent */
+            transition: margin-left 0.3s ease;
+        }
+
+        .main-content.expanded {
+            margin-left: 0;
+        }
+
+        /* Sidebar Toggle */
+        .sidebar-toggle {
+            background-color: #5a92d6;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            position: fixed;
+            top: 10px;
+            left: 250px;
+            transition: left 0.3s ease;
+            font-family: 'Courier New', Courier, monospace; /* Set font to Courier */
+        }
+
+        .sidebar-toggle.collapsed {
+            left: 10px;
+        }
+
+        /* Communities Section */
+        .communities {
+            background-color: #cbc3e3; /* Changed to Pastel Purple */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .community {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .community h3 {
+            margin: 0;
+        }
+
+        /* Search and Filter */
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+
+        /* Create Community Button */
+        .create-community {
+            background-color: #5a92d6;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-family: 'Courier New', Courier, monospace; /* Set font to Courier */
+        }
+
+        .create-community:hover {
+            background-color: #4c83bc;
+        }
+
+        /* Actions Button Styling */
+        .actions button {
+            background-color: #5a92d6;
+            border: none;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            margin: 5px;
+            font-family: 'Courier New', Courier, monospace; /* Set font to Courier */
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .actions button:hover {
+            background-color: #4c83bc;
+        }
+
+        /* Category Tabs */
+        .category-tabs {
+            margin-bottom: 20px;
+        }
+
+        .category-tabs button {
+            background-color: #c9dff4;
+            border: none;
+            padding: 10px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: 'Courier New', Courier, monospace; /* Set font to Courier */
+        }
+
+        .category-tabs button.active {
+            background-color: #5a92d6;
+            color: white;
+        }
+
+        .category-tabs button:hover {
+            background-color: #b0d4ee;
+        }

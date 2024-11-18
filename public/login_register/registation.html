@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="registrationStyles.css">
+    <script type="module" src="setup.mjs"></script>
+    <script type="module" src="server.mjs"></script>
+    <script type="module" src="auth.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="registration-section">
+            <h2>Registration</h2>
+            <form class="registration-form">
+                <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+
+             <!-- Two-column layout container -->
+              <div class="form-columns">
+                <!-- Left column -->
+                 <div class="left-column">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+            </div>
+                    <!-- Right column -->
+                     <div class="right-column">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" placeholder="Enter your username">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input type="text" id="phone" placeholder="Enter your phone number">
+                        </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password">
+                </div>
+            </div>
+         </div>
+
+                <div class="form-group full-width">
+                    <!-- <label>Gender</label> -->
+                    <div class="gender-container">
+                        <!-- <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="prefer-not"> Prefer not to say</label> -->
+                </div>
+            </div>
+
+                <div class="form-group full-width">
+                    <button type="submit" class="register-btn" id="submitSignUp">Register</button>
+                </div>
+                </form>
+        </div>
+    </div>
+    <script src="stars.js"></script>
+</body>
+</html>

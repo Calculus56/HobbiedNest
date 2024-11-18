@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communities - Habit Tracker</title>
+    <link rel="stylesheet" href="community.css"/>
+</head>
+<body>
+    <!-- Website Header -->
+    <div class="header">
+        Your Communities
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h1>Habit Tracker</h1>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="communities.html">Communities</a></li>
+            <li><a href="bookmarks.html">Bookmarks</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle">></button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <div class="communities">
+            <h2>Explore Communities</h2>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search communities..." onkeyup="filterCommunities()">
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="active" onclick="filterByCategory('all')">All</button>
+                <button onclick="filterByCategory('fitness')">Fitness</button>
+                <button onclick="filterByCategory('tech')">Tech</button>
+                <button onclick="filterByCategory('books')">Books</button>
+            </div>
+
+            <!-- Create Community Button -->
+            <button class="create-community" onclick="createCommunity()">Create New Community</button>
+
+            <div id="communityList">
+                <div class="community" data-name="Fitness Enthusiasts" data-category="fitness">
+                    <h3>Fitness Enthusiasts</h3>
+                    <p>A community for fitness lovers to share tips and motivation.</p>
+                    <div class="actions">
+                        <button>Join</button>
+                        <button>Leave</button>
+                    </div>
+                </div>
+                <div class="community" data-name="Tech Innovators" data-category="tech">
+                    <h3>Tech Innovators</h3>
+                    <p>A hub for tech enthusiasts to discuss the latest trends and innovations.</p>
+                    <div class="actions">
+                        <button>Join</button>
+                        <button>Leave</button>
+                    </div>
+                </div>
+                <div class="community" data-name="Book Club" data-category="books">
+                    <h3>Book Club</h3>
+                    <p>A place for book lovers to share and discuss their favorite reads.</p>
+                    <div class="actions">
+                        <button>Join</button>
+                        <button>Leave</button>
+                    </div>
+                </div>
+                <!-- Add more communities as needed -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle sidebar functionality
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+            mainContent.classList.toggle('expanded');
+            sidebarToggle.classList.toggle('collapsed');
+        });
+
+        // Filter communities based on search input
+        function filterCommunities() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const communities = document.getElementById('communityList').getElementsByClassName('community');
+
+            for (let i = 0; i < communities.length; i++) {
+                const community = communities[i];
+                const name = community.getAttribute('data-name').toLowerCase();
+                if (name.includes(filter)) {
+                    community.style.display = '';
+                } else {
+                    community.style.display = 'none';
+                }
+            }
+        }
+
+        // Filter communities by category
+        function filterByCategory(category) {
+            const communities = document.getElementById('communityList').getElementsByClassName('community');
+            for (let i = 0; i < communities.length; i++) {
+                const community = communities[i];
+                if (category === 'all' || community.getAttribute('data-category') === category) {
+                    community.style.display = '';
+                } else {
+                    community.style.display = 'none';
+                }
+            }
+
+            const buttons = document.querySelectorAll('.category-tabs button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            document.querySelector(`.category-tabs button[onclick="filterByCategory('${category}')"]`).classList.add('active');
+        }
+
+        // Create new community function (placeholder)
+        function createCommunity() {
+            alert('Create new community functionality to be implemented!');
+        }
+    </script>
+</body>
+</html>
+
+

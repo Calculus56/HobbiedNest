@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Website</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script type="module" src="setup.mjs"></script>
+    <script type="module" src="server.mjs"></script>
+    <script type="module" src="auth.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <!--Left Side login form-->
+        <div class="login-section">
+            <h1>Hello!</h1>
+        <form method="post" action="">
+            <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+            <div class="input-container">
+                <label for="email">Username</label>
+                <input type="text" id="email" placeholder="Username"/>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password"/>
+            </div>
+            <button type="submit" class="login-btn" id="submitSignIn">Login</button>
+        </form>
+        <p class="create-account">Create an account <a href="registation.html">here</a></p>
+        </div>
+
+        <!-- Right side section-->
+         <div class="promo-section">
+            <h2>The new way to connect</h2>
+            <ul>
+                <li>Meet new people</li>
+                <li>Bond over new experiences</li>
+                <li>Start new hobbies</li>
+                <li>Rediscover yourself</li>
+            </ul>
+         </div>
+        </div>
+        
+    <nav class="navbar">
+      <div class="navbar_container">
+        <a href="/" id="navbar_logo">NEXT</a>
+        <div class="navbar_toggle" id="mobile-menu">
+
+        </div>
+    </div>  
+    </nav>
+    
+</body>
+</html>
